@@ -11,7 +11,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Fq0-7y-BF7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="16G-GI-A5V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController navigationBarHidden="YES" id="SWy-jX-iZS" sceneMemberID="viewController">
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ACE-af-dMT">
@@ -21,6 +20,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CZL-m2-wtR"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16G-GI-A5V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-364" y="79"/>
         </scene>
@@ -131,6 +131,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I2Z-u2-CUK"/>
+                    <connections>
+                        <outlet property="botaoLogin" destination="bv7-R1-Hpd" id="3Ao-o3-mH3"/>
+                        <outlet property="botaoPrimeiroAcesso" destination="EI9-A6-uev" id="LIe-ac-aqW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -154,6 +158,9 @@
                                 <state key="normal" backgroundImage="Icone_Home">
                                     <attributedString key="attributedTitle"/>
                                 </state>
+                                <connections>
+                                    <action selector="botaoCasa:" destination="uEG-bf-r0w" eventType="touchUpInside" id="TXR-qZ-SRD"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" image="Icone_User" translatesAutoresizingMaskIntoConstraints="NO" id="FnF-Br-bP7">
                                 <rect key="frame" x="127.5" y="118.5" width="120" height="120"/>
@@ -207,7 +214,8 @@
                                     <color key="titleColor" systemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="TlM-1V-xzR" kind="show" id="fOB-uH-H4h"/>
+                                    <action selector="botaoProximo:" destination="uEG-bf-r0w" eventType="touchUpInside" id="Zal-WJ-rxA"/>
+                                    <segue destination="TlM-1V-xzR" kind="show" identifier="cadastroViewController" id="fOB-uH-H4h"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="drn-5f-cSx">
@@ -225,6 +233,9 @@
                                         <state key="normal" backgroundImage="questionmark.circle.fill" catalog="system">
                                             <attributedString key="attributedTitle"/>
                                         </state>
+                                        <connections>
+                                            <action selector="botaoTooltip:" destination="uEG-bf-r0w" eventType="touchUpInside" id="ZMq-i9-66P"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A senha deve conter de 6 à 8 caracteres numéricos." textAlignment="justified" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXO-pa-YYc">
                                         <rect key="frame" x="0.0" y="40" width="242" height="20"/>
@@ -257,6 +268,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TGZ-ng-VHY"/>
+                    <connections>
+                        <outlet property="botaoProximo" destination="Mdx-kP-Rgl" id="1iu-4E-MJs"/>
+                        <outlet property="dicaLabel" destination="wXO-pa-YYc" id="nsX-ni-gae"/>
+                        <outlet property="emailTextField" destination="KUN-oZ-uBZ" id="c1M-xK-4bd"/>
+                        <outlet property="senhaTextField" destination="siL-Hf-dOW" id="9uC-NR-wwb"/>
+                        <outlet property="validationLabel" destination="av5-hh-EeG" id="x7s-KX-Dgr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PIw-4d-ED8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -280,6 +298,9 @@
                                 <state key="normal" backgroundImage="Icone_Home">
                                     <attributedString key="attributedTitle"/>
                                 </state>
+                                <connections>
+                                    <action selector="botaoHome:" destination="TlM-1V-xzR" eventType="touchUpInside" id="b4M-gl-uDu"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" image="Icone_User" translatesAutoresizingMaskIntoConstraints="NO" id="ecD-Vw-AJP">
                                 <rect key="frame" x="127.5" y="118.5" width="120" height="120"/>
@@ -363,6 +384,9 @@
                                         <state key="normal" title="VOLTAR">
                                             <color key="titleColor" systemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="botaoVoltar:" destination="TlM-1V-xzR" eventType="touchUpInside" id="SXB-vN-fft"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYe-u1-r29">
                                         <rect key="frame" x="231" y="0.0" width="144" height="35"/>
@@ -371,6 +395,10 @@
                                         <state key="normal" title="SALVAR">
                                             <color key="titleColor" systemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveButton:" destination="TlM-1V-xzR" eventType="touchUpInside" id="XlI-kS-YEI"/>
+                                            <segue destination="Zbm-kD-pRs" kind="show" id="KJE-wg-zwl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -403,6 +431,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1wZ-lO-WRJ"/>
+                    <connections>
+                        <outlet property="botaoSalvar" destination="CYe-u1-r29" id="fxM-zK-s8C"/>
+                        <outlet property="botaoVoltar" destination="7dm-BW-yCa" id="Xa5-kw-Byi"/>
+                        <outlet property="dateField" destination="fIM-Lt-QJs" id="pXJ-uB-f26"/>
+                        <outlet property="freqField" destination="nfO-CU-Kan" id="JAD-g6-Q9a"/>
+                        <outlet property="qtdField" destination="8zE-Oa-4KN" id="tFO-xi-Brq"/>
+                        <outlet property="textField" destination="8Ma-Mq-NpM" id="nND-qy-O9q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GAY-Vh-bVQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -426,6 +462,9 @@
                                 <state key="normal" backgroundImage="Icone_Home">
                                     <attributedString key="attributedTitle"/>
                                 </state>
+                                <connections>
+                                    <action selector="homeButton:" destination="9ev-67-6ag" eventType="touchUpInside" id="1Zu-m3-weq"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" image="Icone_User" translatesAutoresizingMaskIntoConstraints="NO" id="Apd-F7-ofD">
                                 <rect key="frame" x="127.5" y="118.5" width="120" height="120"/>
@@ -479,7 +518,8 @@
                                     <color key="titleColor" systemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Zbm-kD-pRs" kind="show" id="y4j-ne-FwN"/>
+                                    <action selector="loginButton:" destination="9ev-67-6ag" eventType="touchUpInside" id="IiT-el-CAb"/>
+                                    <segue destination="Zbm-kD-pRs" kind="show" identifier="homeLogadaViewController" id="y4j-ne-FwN"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="UCR-jw-7BO">
@@ -498,7 +538,8 @@
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="r9Z-Bp-gTX" kind="show" id="u0c-gx-9PX"/>
+                                            <action selector="esqueciSenha:" destination="9ev-67-6ag" eventType="touchUpInside" id="qSu-Ex-mNa"/>
+                                            <segue destination="r9Z-Bp-gTX" kind="show" identifier="esqueciSenha" id="u0c-gx-9PX"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -526,10 +567,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bLe-mh-py9"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Ldy-ei-TGG" id="i1J-iZ-Ra5"/>
+                        <outlet property="loginButton" destination="B5S-IX-wBG" id="IOH-gd-GBl"/>
+                        <outlet property="passwordTextField" destination="8Ge-zq-r8V" id="39c-t0-Udq"/>
+                        <outlet property="validationLabel" destination="BJO-wc-DM1" id="zTK-iR-i6D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlq-Vu-0EY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="529" y="845"/>
+            <point key="canvasLocation" x="199" y="843"/>
         </scene>
         <!--Password View Controller-->
         <scene sceneID="5MD-36-0mK">
@@ -549,6 +596,9 @@
                                 <state key="normal" backgroundImage="Icone_Home">
                                     <attributedString key="attributedTitle"/>
                                 </state>
+                                <connections>
+                                    <action selector="HomeButton:" destination="r9Z-Bp-gTX" eventType="touchUpInside" id="mFC-g1-TSs"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" image="Icone_User" translatesAutoresizingMaskIntoConstraints="NO" id="zgc-rF-qJd">
                                 <rect key="frame" x="127.5" y="118.5" width="120" height="120"/>
@@ -594,6 +644,9 @@
                                 <state key="normal" title="LOGAR">
                                     <color key="titleColor" systemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendButton:" destination="r9Z-Bp-gTX" eventType="touchUpInside" id="ffe-GE-PiN"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52o-dl-GH9">
                                 <rect key="frame" x="317.5" y="397" width="29.5" height="16.5"/>
@@ -622,10 +675,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tdD-sy-I1b"/>
+                    <connections>
+                        <outlet property="emailField" destination="yd7-uY-RZV" id="DOC-15-CYH"/>
+                        <outlet property="sendButton" destination="roc-P6-krg" id="bAJ-h1-Sp7"/>
+                        <outlet property="validationLabel" destination="52o-dl-GH9" id="KZQ-Vm-4fn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5la-zV-eNn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1364" y="844"/>
+            <point key="canvasLocation" x="2410" y="842"/>
         </scene>
         <!--Home Logada View Controller-->
         <scene sceneID="HnP-dj-2CH">
@@ -765,6 +823,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vKE-LD-39m"/>
+                    <connections>
+                        <outlet property="desperdicioBotao" destination="7Jx-nU-uKb" id="cVb-1d-jjJ"/>
+                        <outlet property="vencimentoBotao" destination="ALl-bf-Ku6" id="ZsX-8q-hzQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bO1-a3-hEi" sceneMemberID="firstResponder"/>
             </objects>
@@ -788,6 +850,9 @@
                                 <state key="normal" backgroundImage="Icone_Home">
                                     <attributedString key="attributedTitle"/>
                                 </state>
+                                <connections>
+                                    <action selector="voltarHomeBotao:" destination="PMY-op-RFt" eventType="touchUpInside" id="vqo-Zn-t4T"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_dontwaste" translatesAutoresizingMaskIntoConstraints="NO" id="NKK-Bd-KTE">
                                 <rect key="frame" x="90" y="40" width="90" height="88"/>
@@ -841,6 +906,9 @@
                                 <state key="normal" title="VOLTAR">
                                     <color key="titleColor" systemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="voltarBotao:" destination="PMY-op-RFt" eventType="touchUpInside" id="Vyb-it-nCy"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lih-J8-re7">
                                 <rect key="frame" x="6" y="211" width="363" height="297"/>
@@ -946,12 +1014,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5sU-2k-lNe"/>
+                    <connections>
+                        <outlet property="fundoDespensa" destination="Lt8-vb-AlG" id="qk2-I5-XyB"/>
+                        <outlet property="fundoGeladeira" destination="h63-zh-fqs" id="3C9-gS-nio"/>
+                        <outlet property="voltarBotao" destination="6ib-hh-JjB" id="eha-h6-gIG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w0C-gf-i0x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1364" y="1604"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="y4j-ne-FwN"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Dispensa" width="135" height="76"/>
         <image name="Fundo" width="376" height="668"/>

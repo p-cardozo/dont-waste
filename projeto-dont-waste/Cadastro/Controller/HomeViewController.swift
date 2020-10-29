@@ -11,7 +11,6 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var botaoPrimeiroAcesso: UIButton!
     @IBOutlet weak var botaoLogin: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.botaoPrimeiroAcesso.layer.borderWidth = 1
