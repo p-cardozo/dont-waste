@@ -22,6 +22,13 @@
 		DDE85835254A166800D2E536 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE85834254A166800D2E536 /* PasswordViewController.swift */; };
 		DDE8583A254A167A00D2E536 /* HomeLogadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE85839254A167A00D2E536 /* HomeLogadaViewController.swift */; };
 		DDE8583F254A169400D2E536 /* TelaCategoriasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE8583E254A169400D2E536 /* TelaCategoriasViewController.swift */; };
+		DDEB5AB1255B24A50062E6BC /* PacoteItensDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB5AAF255B24A50062E6BC /* PacoteItensDAO.swift */; };
+		DDEB5AB2255B24A50062E6BC /* ItensDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB5AB0255B24A50062E6BC /* ItensDAO.swift */; };
+		DDEB5ABC255B24FD0062E6BC /* DetalhesItens.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB5ABA255B24FD0062E6BC /* DetalhesItens.swift */; };
+		DDEB5ABD255B24FD0062E6BC /* Itens.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB5ABB255B24FD0062E6BC /* Itens.swift */; };
+		DDEB5AC2255B25090062E6BC /* ColecaoItensCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB5AC1255B25090062E6BC /* ColecaoItensCollectionViewCell.swift */; };
+		DDEB5AC8255B25130062E6BC /* ItensGeladeiraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB5AC6255B25130062E6BC /* ItensGeladeiraViewController.swift */; };
+		DDEB5AC9255B25130062E6BC /* CadastroItensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB5AC7255B25130062E6BC /* CadastroItensViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +70,13 @@
 		DDE85834254A166800D2E536 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		DDE85839254A167A00D2E536 /* HomeLogadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLogadaViewController.swift; sourceTree = "<group>"; };
 		DDE8583E254A169400D2E536 /* TelaCategoriasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaCategoriasViewController.swift; sourceTree = "<group>"; };
+		DDEB5AAF255B24A50062E6BC /* PacoteItensDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PacoteItensDAO.swift; path = ../../../DAO/PacoteItensDAO.swift; sourceTree = "<group>"; };
+		DDEB5AB0255B24A50062E6BC /* ItensDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItensDAO.swift; path = ../../../DAO/ItensDAO.swift; sourceTree = "<group>"; };
+		DDEB5ABA255B24FD0062E6BC /* DetalhesItens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalhesItens.swift; path = "../../../../projeto-dont-waste /projeto-dont-waste/CadastroItens/Model/DetalhesItens.swift"; sourceTree = "<group>"; };
+		DDEB5ABB255B24FD0062E6BC /* Itens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Itens.swift; path = "../../../../projeto-dont-waste /projeto-dont-waste/CadastroItens/Model/Itens.swift"; sourceTree = "<group>"; };
+		DDEB5AC1255B25090062E6BC /* ColecaoItensCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColecaoItensCollectionViewCell.swift; path = "../../../../projeto-dont-waste /projeto-dont-waste/CadastroItens/View/ColecaoItensCollectionViewCell.swift"; sourceTree = "<group>"; };
+		DDEB5AC6255B25130062E6BC /* ItensGeladeiraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItensGeladeiraViewController.swift; path = "../../../../projeto-dont-waste /projeto-dont-waste/CadastroItens/Controller/ItensGeladeiraViewController.swift"; sourceTree = "<group>"; };
+		DDEB5AC7255B25130062E6BC /* CadastroItensViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CadastroItensViewController.swift; path = "../../../../projeto-dont-waste /projeto-dont-waste/CadastroItens/Controller/CadastroItensViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +127,13 @@
 		DDE857D4254A118E00D2E536 /* projeto-dont-waste */ = {
 			isa = PBXGroup;
 			children = (
+				DDEB5AAB255B24610062E6BC /* DAO */,
 				DDE85808254A13A200D2E536 /* Extensions */,
 				DDE85809254A13B100D2E536 /* Model */,
 				DDE8580A254A13BD00D2E536 /* Cadastro */,
 				DDE8580B254A13C600D2E536 /* Login */,
 				DDE8580C254A13CD00D2E536 /* HomeLogada */,
+				DDEB5AB6255B24C10062E6BC /* CadastroItens */,
 				DDE857D5254A118E00D2E536 /* AppDelegate.swift */,
 				DDE857D7254A118E00D2E536 /* SceneDelegate.swift */,
 				DDE857DB254A118E00D2E536 /* Main.storyboard */,
@@ -209,6 +225,51 @@
 			children = (
 				DDE85839254A167A00D2E536 /* HomeLogadaViewController.swift */,
 				DDE8583E254A169400D2E536 /* TelaCategoriasViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DDEB5AAB255B24610062E6BC /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				DDEB5AB0255B24A50062E6BC /* ItensDAO.swift */,
+				DDEB5AAF255B24A50062E6BC /* PacoteItensDAO.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		DDEB5AB6255B24C10062E6BC /* CadastroItens */ = {
+			isa = PBXGroup;
+			children = (
+				DDEB5AB7255B24D50062E6BC /* Model */,
+				DDEB5AB8255B24DA0062E6BC /* View */,
+				DDEB5AB9255B24DF0062E6BC /* Controller */,
+			);
+			path = CadastroItens;
+			sourceTree = "<group>";
+		};
+		DDEB5AB7255B24D50062E6BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DDEB5ABA255B24FD0062E6BC /* DetalhesItens.swift */,
+				DDEB5ABB255B24FD0062E6BC /* Itens.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DDEB5AB8255B24DA0062E6BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDEB5AC1255B25090062E6BC /* ColecaoItensCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDEB5AB9255B24DF0062E6BC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DDEB5AC7255B25130062E6BC /* CadastroItensViewController.swift */,
+				DDEB5AC6255B25130062E6BC /* ItensGeladeiraViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -344,9 +405,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDE8582D254A164A00D2E536 /* LoginViewController.swift in Sources */,
+				DDEB5AC8255B25130062E6BC /* ItensGeladeiraViewController.swift in Sources */,
+				DDEB5AC2255B25090062E6BC /* ColecaoItensCollectionViewCell.swift in Sources */,
 				DDE85835254A166800D2E536 /* PasswordViewController.swift in Sources */,
 				DDE857DA254A118E00D2E536 /* HomeViewController.swift in Sources */,
+				DDEB5AB1255B24A50062E6BC /* PacoteItensDAO.swift in Sources */,
+				DDEB5AB2255B24A50062E6BC /* ItensDAO.swift in Sources */,
 				DDE8583A254A167A00D2E536 /* HomeLogadaViewController.swift in Sources */,
+				DDEB5ABC255B24FD0062E6BC /* DetalhesItens.swift in Sources */,
+				DDEB5ABD255B24FD0062E6BC /* Itens.swift in Sources */,
+				DDEB5AC9255B25130062E6BC /* CadastroItensViewController.swift in Sources */,
 				DDE85823254A161300D2E536 /* CadastroViewController.swift in Sources */,
 				DDE857D6254A118E00D2E536 /* AppDelegate.swift in Sources */,
 				DDE8583F254A169400D2E536 /* TelaCategoriasViewController.swift in Sources */,
